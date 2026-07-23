@@ -1,6 +1,20 @@
 {
   "name": "practica-javascript",
   "version": "1.0.0",
+  "description": "Introduccion a exprex con la ficha 3407184",
+  "keywords": [
+    "3407184"
+  ],
+  "homepage": "https://github.com/calderonpenajuansebastian-rgb/practica-de-javascrip#readme",
+  "bugs": {
+    "url": "https://github.com/calderonpenajuansebastian-rgb/practica-de-javascrip/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/calderonpenajuansebastian-rgb/practica-de-javascrip.git"
+  },
+  "license": "ISC",
+  "author": "Juan Calderon",
   "type": "module",
   "main": "index.js",
   "scripts": {
@@ -8,5 +22,6 @@
   },
   "dependencies": {
     "express": "^4.19.2"
-  }
+  },
+  "devDependencies": {}
 }
