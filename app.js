@@ -15,7 +15,9 @@ app.get('/', (req, res) => {
 
 // Lista de productos
 app.get('/productos', (req, res) => {
-  res.send(`
+  const orden = req.query.orden ||"sin orden";
+  const pagina = req.query.pagina || 1;
+  res.send(`<h1>Lista de productos en orden ${orden} ,en la pagina ${pagina}</h1>
     <h1>Lista de productos</h1>
     <ol>
       <li>Televisor</li>
@@ -94,8 +96,29 @@ app.get('/producto/:categoria/:id', (req, res) => {
     });
   }
 });
+app.get('/usuarios/:id/posts', (req, res) => {
+  const id = req.params.id;
+  const orden = req.query.orden;
+
+  const posts = [
+    {
+      id: 1,
+      userId: id,
+      title: "Mi primer post",
+      body: "Este es el contenido de mi primer post"
+    }
+  ];
+
+  res.json({
+    usuario: id,
+    orden: orden,
+    publicaciones: posts
+  });
+});
+
+
 
 // Iniciar servidor
 app.listen(PORT, () => {
   console.log(`Servidor en producción corriendo en el puerto: ${PORT}`);
-});
+}); 
