@@ -1,10 +1,12 @@
 import express from 'express';
 
+import cors from 'cors';
 const app = express();
 
 // Middleware para recibir JSON
 app.use(express.json());
 
+import cors from 'cors';
 // Puerto del servidor
 const PORT = process.env.PORT || 4000;
 
@@ -26,7 +28,11 @@ app.get('/productos', (req, res) => {
       <li>Estufa</li>
     </ol>
   `);
+
+
+  res.json(productos);
 });
+
 
 // Parámetro simple
 app.get('/saludo/:nombre', (req, res) => {
@@ -115,6 +121,14 @@ app.get('/usuarios/:id/posts', (req, res) => {
     publicaciones: posts
   });
 });
+
+app.get('/APRENDICES', (req, res) => {
+  res.json({
+    mensaje: "Bienvenido a la ruta de aprendices",
+    aprendices: "gracias por resir¿birnos"
+  });
+});
+
 
 
 
