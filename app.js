@@ -5,7 +5,7 @@ const app = express();
 // Middleware para recibir JSON
 app.use(express.json());
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.get('/', (req, res) => {
   res.send('Hola, estamos aprendiendo express con la ficha 3407184');
